@@ -1,11 +1,15 @@
 package cm.nsi.customer;
 
+import cm.nsi.customer.repositories.CustomerRepository;
+import org.springframework.stereotype.Service;
+
 /**
  * @author ravnely
  * @project amigosservices
  * @Created 05/03/2022, 14:40:22, sam.
  **/
-public record CustomerService() {
+@Service
+public record CustomerService(CustomerRepository customerRepository) {
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
                 .firstName(request.firstName())
@@ -15,6 +19,6 @@ public record CustomerService() {
 
         // todo: check if email is valid
         // todo: check if email is not valid
-        // todo: store customer in db
+        customerRepository.save(customer);
     }
 }

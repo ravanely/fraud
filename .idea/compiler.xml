@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="amigosservices" target="1.7" />
-      <module name="customer" target="17" />
+      <module name="customer" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>
