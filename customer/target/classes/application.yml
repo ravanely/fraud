@@ -4,8 +4,8 @@ spring:
   application:
     name: customer
   datasource:
-    username: postgres
-    password: Admin1234/
+    username: amigoscode
+    password: password
     url: jdbc:postgresql://localhost:5432/customer
   jpa:
     hibernate:
